@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>User data</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Name: {{.Name}}</h1><br>
+
+{{/*main table info user    */}}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Visa ID:</th>
+            <th scope="col">Nationality:</th>
+            <th scope="col">Age:</th>
+            <th scope="col">Speaks:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="visa">{{.Visa}}</td>
+            <td id="nationality">{{.Nationality}}</td>
+            <td id="age">{{.Age}}</td>
+            <td id="speaks">{{.Speaks}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <ul class="list-group">
+                <li class="list-group-item active">	Vital Medical Conditions </li>
+                {{range .MedCondition}}
+                {{if ne . ""}}<li class="list-group-item">{{.}}</li>{{end}}
+                        {{end}}
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <ul class="list-group">
+                <li class="list-group-item active">	Medications </li>
+                {{range .MedMedications}}
+                {{if ne . ""}}<li class="list-group-item">{{.}}</li>{{end}}
+                {{end}}
+            </ul>
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-4 offset-sm-4"><a href="/userChange"><button type="button" class="btn btn-default btn-block btn-lg">Edit</button></a></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 offset-sm-4"><a href="/"><button type="button" class="btn btn-success btn-block btn-lg">Change user</button></a></div>
+    </div>
+
+
+
+{{/*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>*/}}
+{{/*<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>*/}}
+{{/*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>*/}}
+</body>
+</html>
