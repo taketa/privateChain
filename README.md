@@ -1,4 +1,4 @@
-Implementing interaction with SimpleStarage smart contract through golang in private blockchain.
+Implementing interaction with SimpleStarage smart contract through golang in private blockchain.  
 Creating private network:
 1) Create several accounts:
 geth account new
