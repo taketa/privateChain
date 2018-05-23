@@ -1,4 +1,5 @@
-Creating test private network:
+Implementing interaction with SimpleStarage smart contract through golang in private blockchain.
+Creating private network:
 1) Create several accounts:
 geth account new
 2) Create genesis.json file to initialize network:
